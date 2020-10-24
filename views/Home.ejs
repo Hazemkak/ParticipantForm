@@ -1,0 +1,84 @@
+<%-include("partials/Header.ejs")%>
+
+<div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center p-3 my-3 text-black-50 bg-purple rounded shadow-sm">
+            <img class="mr-3" src="/images/ieee_blue_logo.png" alt="" width="70" height="70">
+            <div class="lh-100">
+              <h6 style="text-align: left; font-size:200%;" class="mb-0 text-black lh-100">Welcome To IEEE</h6>
+              <small >please fill in the form below</small>
+            </div>
+          </div>   
+        <hr>
+        <form action="/" method="post">
+        <%-include("partials/messages.ejs")%>
+        <div class="row">
+            <div class="inputField col-lg-6 col-md-6 col-sm-12">
+                <label for="">First Name</label>
+                <input class="form-control" type="text" name="firstName" >
+            </div>
+            <div class="inputField col-lg-6 col-md-6 col-sm-12">
+                <label for="">Last Name</label>
+                <input class="form-control" type="text" name="lastName" >
+            </div>
+        </div>
+        <div class="inputField">
+            <label for="">Email</label>
+            <input class="form-control" type="email" name="mail" placeholder="you@example.com">
+        </div>
+        <div class="inputField">
+            <label for="">Phone Number</label>
+            <input class="form-control" type="tel" name="phone" placeholder="01*********">
+        </div>
+        <div class="inputField">
+            <label for="">Faculty Name</label>
+            <input class="form-control" type="text" name="faculty" placeholder="ex: Faculty Of Engineering">
+        </div>
+        <div class="inputField">
+            <label for="">University Name</label>
+            <input class="form-control" type="text" name="university" placeholder="ex: BUE University">
+        </div>
+        <div class="row">
+            <div class="inputField col-lg-6 col-md-6 col-sm-12">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <label style="background-color: #3f51b5; color: white;" class="input-group-text" for="inputGroupSelect01">First Preference</label>
+                    </div>
+                    <select class="custom-select" name="firstpref" id="inputGroupSelect01">
+                        <option selected>Choose...</option>
+                        <option name="analog" value="analog">Analong Electronics</option>
+                        <option name="digital" value="digital">Digital Electronics</option>
+                        <option name="arduino" value="arduino">Arduino</option>
+                        <option name="python" value="python">Python</option>
+                        <option name="c++" value="c">C++</option>
+                        <option name="java" value="java">Java</option>
+                        <option name="front" value="front">Front End</option>
+                    </select>
+                  </div>
+            </div>
+            <div class="inputField col-lg-6 col-md-6 col-sm-12">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <label style="background-color: #3f51b5; color: white;" class="input-group-text" for="inputGroupSelect01">Second Preference</label>
+                    </div>
+                    <select class="custom-select" name="secondpref" id="inputGroupSelect01">
+                        <option selected>Choose...</option>
+                        <option name="analog" value="analog">Analong Electronics</option>
+                        <option name="digital" value="digital">Digital Electronics</option>
+                        <option name="arduino" value="arduino">Arduino</option>
+                        <option name="python" value="python">Python</option>
+                        <option name="c++" value="c">C++</option>
+                        <option name="java" value="java">Java</option>
+                        <option name="front" value="front">Front End</option>
+                    </select>
+                  </div>
+            </div>
+        </div>
+        </div>
+        
+            <button class="btn-block btn btn-outline-primary" type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+
+<%-include("partials/Footer.ejs")%>
